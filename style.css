@@ -139,7 +139,7 @@ header .content .right .rectangle{
     top: 20%;
     background-color: var(--second-color);
     border-radius: 30rem;
-    height: 170vh;
+    height: 60vh;
     width: 100%;
     background-image: url("img/home.jpg");
     background-size: cover;

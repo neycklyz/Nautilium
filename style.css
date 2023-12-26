@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root{
-    --main-color: #1d0979;
-    --light-grey: #f7f7f7;
+    --main-color: #0A0C31;
+    --second-color: #53D6FF;
     --dark-grey: #a5a5a5;
 }
 
@@ -15,16 +15,27 @@
 
 body{
     min-height: 100vh;
-    color: var(--main-color);
+    color: white;
+    background-color: var(--main-color);
     font-family: 'Poppins', sans-serif;
-    background: rgb(250,205,255);
-    background: linear-gradient(43deg, rgb(253, 232, 255) 0%, rgba(141,0,255,1) 51%, rgba(29,9,121,1) 100%);
+}
+
+a{
+    color: white;
 }
 
 .container{
-    max-width: 1600px;
+    max-width: 1200px;
     margin-inline: auto;
-    padding-inline: 120px;
+    padding-inline: 32px;
+}
+
+.cta{
+    padding-inline: 0.8rem;
+    padding-block: 0.3rem;
+    border-radius: 1rem;
+    color: var(--main-color);
+    background-color: var(--second-color);
 }
 
 nav{
@@ -40,16 +51,16 @@ nav{
     border-bottom: 1px solid var(--main-color);
 }
 
-nav a{
-    padding-block: 0.5rem;
+nav .links a{
     padding-inline: 0.8rem;
-    border-radius: 5rem;
+    padding-block: 0.3rem;
+    border-radius: 1rem;
     transition: 0.2s all;
 }
 
-nav a:hover{
-    color: white;
-    background-color: var(--main-color);
+nav .links a:hover{
+    color: var(--main-color);
+    background-color: var(--second-color);
     transition: 0.2s all;
 }
 
@@ -59,20 +70,17 @@ nav .left{
 }
 
 header{
-    width: calc(100vw - 320px);
     position: relative;
-    margin-top: 32px;
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
-    background-color: white;
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
 header h1{
-    font-size: 4rem;
-    line-height: 80px;
+    font-size: 3rem;
+    line-height: 64px;
 }
 
 header .content{
@@ -86,9 +94,40 @@ header .content .left{
     display: flex;
     flex-direction: column;
     flex-basis: 60%;
+    padding-right: 7rem;
     gap: 32px;
 }
 
 header .content .right{
+    position: relative;
     flex-basis: 40%;
+    height: 100%;
+}
+
+header .content .right .rectangle{
+    position: relative;
+    top: 20%;
+    background-color: var(--second-color);
+    border-radius: 30rem;
+    height: 130vh;
+    width: 100%;
+    background-image: url("img/home.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header .content .right .rectangle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30rem;
+    opacity: 0.5;
+    background-image: url('img/home.jpg');
+    background-size: cover;
+    filter: blur(100px);
+    z-index: -1;
 }

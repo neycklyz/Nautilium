@@ -57,6 +57,11 @@ nav{
     border-bottom: 1px solid var(--main-color);
 }
 
+nav .logo{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
 nav .links a{
     padding-inline: 0.8rem;
     padding-block: 0.3rem;
@@ -70,9 +75,16 @@ nav .links a:hover{
     transition: 0.2s all;
 }
 
+.currentLink{
+    color: var(--main-color);
+    background-color: var(--second-color);
+    transition: 0.2s all;
+}
+
 nav .left{
     display: flex;
-    gap: 16px;
+    gap: 32px;
+    align-items: center;
 }
 
 header{

@@ -2,8 +2,8 @@
 
 :root{
     --main-color: #0A0C31;
-    --dark-main-color: #05061b;
-    --light-main-color: #151a69;
+    --dark-main-color: #0e0f29;
+    --light-main-color: #01020f;
     --second-color: #53D6FF;
     --dark-grey: #a5a5a5;
 }
@@ -18,7 +18,7 @@
 
 body{
     color: white;
-    background: linear-gradient(45deg, var(--light-main-color) 10%, var(--main-color) 60%);
+    background: linear-gradient(10deg, var(--light-main-color) 10%, var(--main-color) 60%);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -166,6 +166,17 @@ header .content .right .rectangle::before {
     z-index: -1;
 }
 
+header .content .bubble{
+    height: 60rem;
+    width: 60rem;
+    border-radius: 100%;
+    filter: blur(300px);
+    background-color: #53d7ff65;
+    position: absolute;
+    bottom: -60rem;
+    left: -10rem;
+    z-index: -1;
+}
 
 /* //////////////////////////// */
 /* ////////// CARDS /////////// */
@@ -179,7 +190,7 @@ header .content .right .rectangle::before {
 
 
 .cards-container{
-    height: 80vh;
+    height: 60vh;
     display: flex;
     flex-wrap: nowrap;
     gap: 1rem;
@@ -265,6 +276,6 @@ header .content .right .rectangle::before {
 /* //////////////////////////// */
 
 footer{
-    background-color: var(--dark-main-color);
+    background-color: black;
     min-height: 10rem;
 }

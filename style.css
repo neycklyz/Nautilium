@@ -30,6 +30,11 @@ a{
     color: white;
 }
 
+::selection{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
 .container{
     max-width: 1200px;
     margin-inline: auto;
